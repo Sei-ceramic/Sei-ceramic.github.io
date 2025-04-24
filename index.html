@@ -4,79 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SEI Ceramic</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
+      background-color: #fffaf3;
+      font-family: 'Noto Sans KR', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f9f7f3;
-      font-family: 'Playfair Display', serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      overflow-x: hidden;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
     }
     h1 {
-      margin-top: 60px;
       font-size: 48px;
-      color: #3b2e2a;
+      color: #3a2e2a;
+      margin-bottom: 100px;
+      font-family: 'Playfair Display', serif;
     }
-    .canvas-container {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      height: 400px;
-      margin-top: 60px;
-    }
-    svg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }
-    .button {
-      position: absolute;
-      width: 110px;
-      height: 110px;
-      background-color: #d4c2ae;
-      color: #3b2e2a;
+    .node {
+      width: 150px;
+      height: 150px;
+      background-color: #d4b89b;
       border-radius: 50%;
       display: flex;
-      align-items: center;
       justify-content: center;
-      text-align: center;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
       text-decoration: none;
-      font-size: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: background-color 0.3s;
+      position: absolute;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
     }
-    .button:hover {
-      background-color: #c1aa91;
+    .node:hover {
+      transform: scale(1.05);
     }
-    .button.disabled {
-      background-color: #e0ddd9;
-      color: #888;
-      pointer-events: none;
+    .line {
+      position: absolute;
+      width: 200px;
+      height: 100px;
+      border: 2px solid #d4b89b;
+      border-color: transparent transparent #d4b89b transparent;
+      border-radius: 100%/100% 100% 0 0;
+      z-index: -1;
     }
-    .btn1 { top: 40px; left: 10%; }
-    .btn2 { top: 160px; left: 40%; }
-    .btn3 { top: 60px; right: 10%; }
+    .website { top: 180px; left: 20%; }
+    .class   { top: 400px; left: 40%; background-color: #dddcd6; color: #3a2e2a; }
+    .insta   { top: 180px; left: 60%; }
+    .line1   { top: 240px; left: 28%; transform: rotate(25deg); width: 180px; }
+    .line2   { top: 300px; left: 48%; transform: rotate(-25deg); width: 180px; }
+    @media (max-width: 600px) {
+      .website, .class, .insta {
+        position: static;
+        margin: 40px auto;
+      }
+      .line1, .line2 {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
   <h1>SEI</h1>
 
-  <div class="canvas-container">
-    <svg viewBox="0 0 800 400">
-      <path d="M120 95 C300 250, 500 0, 680 120" stroke="#c7b299" stroke-width="2.5" fill="none"/>
-    </svg>
+  <a href="https://smartstore.naver.com/sei_ceramic" class="node website" target="_blank">Website</a>
+  <a href="https://booking.naver.com/sei" class="node class" target="_blank">Class</a>
+  <a href="https://instagram.com/sei_ceramic" class="node insta" target="_blank">Instagram</a>
 
-    <a class="button btn1" href="https://seiceramic.shop" target="_blank">🛙<br>Website</a>
-    <a class="button btn2 disabled" href="#" title="클래스 링크 준비중">📅<br>Class</a>
-    <a class="button btn3" href="https://instagram.com/sei_ceramic?igsh=YWlidjF0Nnp2ajl0" target="_blank">📷<br>Instagram</a>
-  </div>
+  <div class="line line1"></div>
+  <div class="line line2"></div>
 </body>
 </html>
