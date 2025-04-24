@@ -14,42 +14,43 @@
       text-align: center;
       padding: 60px 20px;
     }
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      margin-bottom: 60px;
-      border-bottom: 2px solid #3a2e2a;
-      display: inline-block;
-      padding-bottom: 10px;
+    .logo {
+      width: 120px;
+      margin: 0 auto 60px;
     }
-    .link-button {
-      display: block;
-      width: 200px;
-      margin: 30px auto;
-      padding: 18px 0;
-      border-radius: 999px;
-      background-color: #d4b89b;
-      color: white;
+    .button-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+    .custom-button {
+      position: relative;
+      width: 260px;
+      height: 80px;
+      background-image: url('SEI%20%EB%A1%9C%EA%B3%A0%20%EA%B8%B0%EB%B3%B8.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-decoration: none;
+      color: #3a2e2a;
+      font-weight: 600;
       font-size: 18px;
-      font-weight: 500;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s, background-color 0.3s;
+      transition: transform 0.2s;
     }
-    .link-button:hover {
-      transform: translateY(-4px);
-      background-color: #c0a581;
-    }
-    .blog {
-      background-color: #b6ada4;
+    .custom-button:hover {
+      transform: scale(1.03);
     }
   </style>
 </head>
 <body>
-  <h1>SEI</h1>
+  <img class="logo" src="SEI%20%EB%A1%9C%EA%B3%A0%20%EA%B8%B0%EB%B3%B8.svg" alt="SEI 로고">
 
-  <a class="link-button" href="https://seiceramic.shop" target="_blank">Website</a>
-  <a class="link-button" href="https://booking.naver.com/sei" target="_blank">Class</a>
-  <a class="link-button blog" href="https://blog.naver.com/sei_blog" target="_blank">Blog</a>
+  <div class="button-wrap">
+    <a class="custom-button" href="https://smartstore.naver.com/sei_ceramic" target="_blank">Website</a>
+    <a class="custom-button" href="https://booking.naver.com/sei" target="_blank">Class</a>
+  </div>
 </body>
 </html>
