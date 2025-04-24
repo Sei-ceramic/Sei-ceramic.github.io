@@ -9,22 +9,23 @@
       background-color: #fffaf3;
       font-family: 'Noto Sans KR', sans-serif;
       margin: 0;
-      padding: 40px 20px;
-      text-align: center;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
       position: relative;
-      min-height: 100vh;
     }
     h1 {
       font-size: 48px;
       color: #3a2e2a;
-      margin-bottom: 100px;
+      text-align: center;
+      margin-top: 60px;
       font-family: 'Playfair Display', serif;
     }
     .node {
-      width: 150px;
-      height: 150px;
+      width: 180px;
+      height: 100px;
       background-color: #d4b89b;
-      border-radius: 50%;
+      border-radius: 50% / 50%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -39,23 +40,29 @@
     .node:hover {
       transform: scale(1.05);
     }
-    .website { top: 180px; left: 20%; }
-    .class   { top: 400px; left: 40%; background-color: #dddcd6; color: #3a2e2a; }
-    .insta   { top: 180px; left: 60%; }
+    .website { top: 25%; left: 25%; }
+    .class   { top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #dddcd6; color: #3a2e2a; }
+    .insta   { top: 75%; left: 75%; }
 
     svg {
       position: absolute;
+      width: 100%;
+      height: 100%;
       top: 0;
       left: 0;
       z-index: -1;
-      width: 100%;
-      height: 100%;
     }
-
+    path {
+      stroke: #d4b89b;
+      stroke-width: 3;
+      fill: none;
+      stroke-linecap: round;
+    }
     @media (max-width: 600px) {
-      .website, .class, .insta {
+      .node {
         position: static;
         margin: 40px auto;
+        display: block;
       }
       svg {
         display: none;
@@ -70,11 +77,11 @@
   <a href="https://booking.naver.com/sei" class="node class" target="_blank">Class</a>
   <a href="https://instagram.com/sei_ceramic" class="node insta" target="_blank">Instagram</a>
 
-  <svg viewBox="0 0 1000 800" preserveAspectRatio="none">
+  <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
     <!-- Website to Class -->
-    <path d="M 250 250 Q 400 300 450 430" stroke="#d4b89b" stroke-width="3" fill="none" />
+    <path d="M 250 250 Q 400 350 500 500" />
     <!-- Class to Instagram -->
-    <path d="M 550 430 Q 600 300 750 250" stroke="#d4b89b" stroke-width="3" fill="none" />
+    <path d="M 500 500 Q 600 650 750 750" />
   </svg>
 </body>
 </html>
