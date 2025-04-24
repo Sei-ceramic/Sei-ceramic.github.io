@@ -9,7 +9,7 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #f9f6f2;
+      background-color: #f9f7f3;
       font-family: 'Playfair Display', serif;
       display: flex;
       flex-direction: column;
@@ -22,73 +22,61 @@
       font-size: 48px;
       color: #3b2e2a;
     }
-    .flow-container {
-      margin-top: 60px;
-      width: 100%;
-      max-width: 700px;
+    .canvas-container {
       position: relative;
-      display: flex;
-      justify-content: center;
-    }
-    .link-line {
-      position: absolute;
-      top: 50%;
       width: 100%;
-      height: 200px;
-      pointer-events: none;
+      max-width: 800px;
+      height: 400px;
+      margin-top: 60px;
     }
     svg {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: 200px;
+      height: 100%;
+      pointer-events: none;
     }
-    .button-wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      padding: 0 10px;
-    }
-    .link-button {
-      background: #d5bfa3;
+    .button {
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      background-color: #d4c2ae;
       color: #3b2e2a;
-      border: none;
       border-radius: 50%;
-      width: 120px;
-      height: 120px;
-      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
       text-decoration: none;
-      line-height: 1.4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      font-size: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
+      transition: background-color 0.3s;
     }
-    .link-button:hover {
-      background: #c0a88b;
+    .button:hover {
+      background-color: #c1aa91;
     }
-    .link-button.disabled {
+    .button.disabled {
       background-color: #e0ddd9;
-      pointer-events: none;
       color: #888;
+      pointer-events: none;
     }
+    .btn1 { top: 40px; left: 10%; }
+    .btn2 { top: 160px; left: 40%; }
+    .btn3 { top: 60px; right: 10%; }
   </style>
 </head>
 <body>
   <h1>SEI</h1>
 
-  <div class="flow-container">
-    <div class="link-line">
-      <svg xmlns="http://www.w3.org/2000/svg">
-        <path d="M20,100 C180,0 520,200 680,100" stroke="#c7b299" stroke-width="2" fill="none"/>
-      </svg>
-    </div>
-    <div class="button-wrapper">
-      <a class="link-button" href="https://seiceramic.shop" target="_blank">🛙<br>Website</a>
-      <a class="link-button disabled" href="#" title="클래스 링크 준비중">📅<br>Class</a>
-      <a class="link-button" href="https://instagram.com/sei_ceramic?igsh=YWlidjF0Nnp2ajl0" target="_blank">📷<br>Instagram</a>
-    </div>
+  <div class="canvas-container">
+    <svg viewBox="0 0 800 400">
+      <path d="M120 95 C300 250, 500 0, 680 120" stroke="#c7b299" stroke-width="2.5" fill="none"/>
+    </svg>
+
+    <a class="button btn1" href="https://seiceramic.shop" target="_blank">🛙<br>Website</a>
+    <a class="button btn2 disabled" href="#" title="클래스 링크 준비중">📅<br>Class</a>
+    <a class="button btn3" href="https://instagram.com/sei_ceramic?igsh=YWlidjF0Nnp2ajl0" target="_blank">📷<br>Instagram</a>
   </div>
 </body>
 </html>
