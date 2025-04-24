@@ -23,25 +23,28 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 40px;
-      margin-top: 0;
+      gap: 32px;
       margin-bottom: 100px;
     }
     .svg-button {
       width: 280px;
       height: auto;
+      transition: transform 0.3s;
+    }
+    .svg-button:hover {
+      transform: scale(1.03);
     }
   </style>
 </head>
 <body>
-  <img src="SEI-logo.svg" alt="SEI Logo" class="logo">
+  <img src="로고.svg" alt="SEI Logo" class="logo">
 
   <div class="button-container">
     <a href="https://smartstore.naver.com/sei_ceramic" target="_blank">
-      <img class="svg-button" src="website.svg" alt="Website Button">
+      <img class="svg-button" src="website-1.svg" alt="Website Button">
     </a>
     <a href="https://booking.naver.com/sei" target="_blank">
-      <img class="svg-button" src="class.svg" alt="Class Button">
+      <img class="svg-button" src="class-1.svg" alt="Class Button">
     </a>
   </div>
 </body>
