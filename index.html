@@ -4,50 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SEI Ceramic</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Noto+Serif+KR&display=swap" rel="stylesheet">
   <style>
     body {
+      background-color: #ffffff;
       margin: 0;
       padding: 0;
-      background-color: #ffffff;
-      font-family: 'Noto Serif KR', serif;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
+      font-family: serif;
     }
 
     .logo {
-      width: 200px;
-      margin-top: 80px;
-      margin-bottom: 40px;
+      width: 240px;
+      margin-top: 100px;
+      margin-bottom: 50px;
     }
 
     .button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 280px;
-      height: 60px;
-      margin: 12px 0;
-      border: 1px solid #000;
-      border-radius: 999px;
-      font-size: 20px;
-      color: #000;
-      text-decoration: none;
-      transition: all 0.2s ease;
+      width: 320px;
+      height: auto;
+      margin: 20px 0;
     }
 
-    .button:hover {
-      background-color: #f4f4f4;
+    @media (max-width: 480px) {
+      .logo {
+        width: 180px;
+        margin-top: 80px;
+        margin-bottom: 40px;
+      }
+      .button {
+        width: 260px;
+        margin: 16px 0;
+      }
     }
   </style>
 </head>
 <body>
-  <img src="logo.svg" alt="SEI Logo" class="logo">
+  <img src="로고.svg" alt="SEI Logo" class="logo">
 
-  <a href="https://smartstore.naver.com/sei_ceramic" class="button" target="_blank">website</a>
-  <a href="https://booking.naver.com/sei" class="button" target="_blank">class</a>
+  <a href="https://smartstore.naver.com/sei_ceramic" target="_blank">
+    <img src="website.svg" alt="Website Button" class="button">
+  </a>
+  <a href="https://booking.naver.com/sei" target="_blank">
+    <img src="class.svg" alt="Class Button" class="button">
+  </a>
 </body>
 </html>
