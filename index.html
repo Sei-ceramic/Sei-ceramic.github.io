@@ -3,51 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SEI Ceramic</title>
+  <title>SEI Linktree</title>
   <style>
     body {
-      background-color: #ffffff;
       margin: 0;
       padding: 0;
+      height: 100vh;
+      background: url('background.jpg') no-repeat center center / cover;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       font-family: serif;
     }
 
     .logo {
-      width: 276px; /* 240px * 1.15 */
-      margin-top: 100px;
-      margin-bottom: 55px; /* 50px * 1.1 */
+      width: 280px;
+      margin-bottom: 50px;
     }
 
     .button {
-      width: 259px; /* 288px * 0.9 */
-      height: auto;
+      width: 200px;
       margin: 20px 0;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
       .logo {
-        width: 207px; /* 180px * 1.15 */
-        margin-top: 80px;
-        margin-bottom: 44px; /* 40px * 1.1 */
+        width: 220px;
+        margin-bottom: 40px;
       }
+
       .button {
-        width: 211px; /* 234px * 0.9 */
-        margin: 16px 0;
+        width: 160px;
+        margin: 15px 0;
       }
     }
   </style>
 </head>
 <body>
-  <img src="로고.svg" alt="SEI Logo" class="logo">
 
-  <a href="https://seiceramic.shop" target="_blank">
-    <img src="website.svg" alt="Website Button" class="button">
+  <img src="logo.svg" alt="SEI Logo" class="logo">
+
+  <a href="https://yourwebsite.com" target="_blank">
+    <img src="website.svg" alt="Website" class="button">
   </a>
-  <a href="https://booking.naver.com/sei" target="_blank">
-    <img src="class.svg" alt="Class Button" class="button">
+
+  <a href="https://yourclass.com" target="_blank">
+    <img src="class.svg" alt="Class" class="button">
   </a>
+
 </body>
 </html>
