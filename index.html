@@ -14,7 +14,7 @@
     body {
       font-family: 'Times New Roman', serif;
       background-image: url("background-pc.png"); /* PC용 PNG 배경 */
-      background-size: cover;  /* 이미지가 화면 전체를 채우도록 */
+      background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       height: 100vh;
@@ -26,39 +26,42 @@
     }
 
     .logo {
-      font-size: 48px;
-      font-style: italic;
-      letter-spacing: 10px;
-      margin-bottom: 40px;
-      color: #000;
+      width: 240px;
+      margin-bottom: 50px;
     }
 
     .button {
-      font-size: 20px;
-      padding: 12px 40px;
+      width: 200px;
       margin: 12px 0;
-      border: 1px solid #000;
-      background-color: transparent;
-      border-radius: 999px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .button:hover {
-      background-color: rgba(0, 0, 0, 0.05);
     }
 
     @media screen and (max-width: 768px) {
       body {
-        background-image: url("background.jpg"); /* 모바일 배경 따로 설정 */
-        background-size: contain;
+        background-image: url("background.jpg"); /* 모바일 배경 */
+        background-size: cover;
+      }
+
+      .logo {
+        width: 180px;
+        margin-bottom: 40px;
+      }
+
+      .button {
+        width: 160px;
+        margin: 10px 0;
       }
     }
   </style>
 </head>
 <body>
-  <div class="logo">SEI</div>
-  <a href="https://seiceramic.shop" class="button">website</a>
-  <a href="https://seiceramic.shop/product/list.html?cate_no=42" class="button">class</a>
+  <img src="logo.svg" alt="SEI Logo" class="logo">
+
+  <a href="https://seiceramic.shop" target="_blank">
+    <img src="website.svg" alt="Website" class="button">
+  </a>
+
+  <a href="https://seiceramic.shop/product/list.html?cate_no=42" target="_blank">
+    <img src="class.svg" alt="Class" class="button">
+  </a>
 </body>
 </html>
