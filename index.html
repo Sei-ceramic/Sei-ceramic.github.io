@@ -20,22 +20,19 @@
       background-color: #f9f5eb;
       height: 100vh;
       width: 100vw;
-      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .logo {
       width: 240px;
-      position: absolute;
-      top: 20%;
-      left: 50%;
-      transform: translateX(-50%);
+      margin-bottom: 50px;
     }
 
     .button-group {
-      position: absolute;
-      top: 48%; /* 버튼들만 더 위로 조정 */
-      left: 50%;
-      transform: translateX(-50%);
+      margin-top: -40px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -50,11 +47,12 @@
       body {
         background-image: url("background.jpg");
         background-size: cover;
+        justify-content: center;
       }
 
       .logo {
         width: 180px;
-        top: 15%;
+        margin-bottom: 40px;
       }
 
       .button {
@@ -63,7 +61,7 @@
       }
 
       .button-group {
-        top: 50%;
+        margin-top: -30px;
       }
     }
   </style>
