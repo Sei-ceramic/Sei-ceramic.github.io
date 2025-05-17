@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SEI Linktree</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEI</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Times New Roman', serif;
+      background-image: url("background.png"); /* PC용 PNG 배경 */
+      background-size: cover;  /* 이미지가 화면 전체를 채우도록 */
+      background-repeat: no-repeat;
+      background-position: center;
       height: 100vh;
-      background: url('background.jpg') no-repeat center center / cover;
+      width: 100vw;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-family: serif;
     }
 
     .logo {
-      width: 280px;
-      margin-bottom: 50px;
+      font-size: 48px;
+      font-style: italic;
+      letter-spacing: 10px;
+      margin-bottom: 40px;
+      color: #000;
     }
 
     .button {
-      width: 200px;
-      margin: 20px 0;
+      font-size: 20px;
+      padding: 12px 40px;
+      margin: 12px 0;
+      border: 1px solid #000;
+      background-color: transparent;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background-color 0.3s;
     }
 
-    @media (max-width: 768px) {
-      .logo {
-        width: 220px;
-        margin-bottom: 40px;
-      }
+    .button:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
 
-      .button {
-        width: 160px;
-        margin: 15px 0;
+    @media screen and (max-width: 768px) {
+      body {
+        background-image: url("background-mobile.jpg"); /* 모바일 배경 따로 설정 */
+        background-size: contain;
       }
     }
   </style>
 </head>
 <body>
-
-  <img src="logo.svg" alt="SEI Logo" class="logo">
-
-  <a href="https://seiceramic.shop" target="_blank">
-    <img src="website.svg" alt="Website" class="button">
-  </a>
-
-  <a href="https://https://seiceramic.shop/product/list.html?cate_no=42" target="_blank">
-    <img src="class.svg" alt="Class" class="button">
-  </a>
-
+  <div class="logo">SEI</div>
+  <a href="https://example.com" class="button">website</a>
+  <a href="https://example.com" class="button">class</a>
 </body>
 </html>
